@@ -37,8 +37,8 @@ namespace EstudoLINQ
             Console.WriteLine("Trazer os 3 últimos registros cadastrados");
 
             var pess = pessoa
-                .OrderByDescending(pessoa => pessoa.Id)
-                .Take(3)
+                .OrderByDescending(pessoa => pessoa.Id)//ordem decresente | somente orderBy = Ordem Crescente
+                .Take(3)//takelast(Int)
                 .ToList();
 
             pess.ForEach(p => Console.WriteLine(p.ToString()));
